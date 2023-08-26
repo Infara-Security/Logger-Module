@@ -27,8 +27,6 @@ window.launcher.addModule("logger",
              * @param {...any} message - The message to log.
              */
             _log(type, module, ...message) {
-                // Check if debugging is enabled
-                if (window.launcher.config.debug === true) {
                     type = this._parseType(type);
                     // Output the log message with appropriate styling
                     console[type](
@@ -39,7 +37,6 @@ window.launcher.addModule("logger",
                         "",
                         ...message
                     );
-                }
             },
 
             /**
